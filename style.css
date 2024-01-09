@@ -1,0 +1,120 @@
+/* Réglages généraux */
+body {
+    margin: 0;
+    padding: 0;
+}
+.content{
+    height: 100vh;
+     background-color: aliceblue;
+     padding: 5%;
+}
+/* Styles pour la grille de cartes */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Par défaut, affiche 3 colonnes */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: space-between; /* Alignement des cartes */
+}
+
+
+/* Styles pour les cartes de recherche */
+.search-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+}
+
+.search-card:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.search-section {
+    border: 2px solid #878383;
+    width: 35%;
+    background-color: #3330;
+    padding: 5px 0px;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    max-height: 25px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 0 0 1px #333
+}
+.search-container {
+    flex: 1; 
+    overflow: hidden; 
+}
+
+#query {
+    flex: 1;
+    border: none; 
+    outline: none; 
+}
+.combobox select {
+    padding: 1px;
+    outline: none;
+    border: none;
+    transition: width 0.3s; 
+  }
+  
+  .combobox select:focus {
+    outline: none;
+  }
+  
+
+.search-container {
+    display: flex;
+    margin-left: 10px;  
+    margin-right: 10px;
+}
+
+#exa-icon {
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 0 2px #d3cccc;
+    display: block; 
+    margin: 0 auto; 
+    transition: opacity 2.0s ease-in-out; 
+}
+
+
+.header{
+    margin-top: 8%;
+}
+#search-select {
+    background-color: white;
+    color: #366fa1;
+    font-weight: bold;
+    padding: 4px;
+    border: none;
+    width: 100%;
+}
+
+button[type="submit"] {
+    margin-left: 5px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: grey;
+}
+
+
+  
+.floatting {
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(45, 0px);
+  }
+}

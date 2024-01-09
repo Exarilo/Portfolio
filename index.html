@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='styles.css'>
-    <title>Romain Madery Portfolio</title>
-  </head>
-  <body>
-    <h1>Mon Portfolio</h1>
-  </body>
-  <script src='script.js'></script> 
+
+<head>
+    <title>Exa Navigator</title>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="./Ressources/favicon.png">
+</head>
+
+<body>
+    <div class="header">
+        <img id="exa-icon" src="./Ressources/NavigatorIcon.png" width="100px" height="200" />
+        <div class="search-section">
+            <div class="search-container">
+                <div class="combobox">
+                    <select id="search-select" onchange="adjustComboBoxSize()">
+                      <option value="option-all">TOUT</option>
+                      <option value="option-presentation">PRESENTATION</option>
+                      <option value="option-school">SCOLAIRE</option>
+                      <option value="option-internship">ALTERNANCE</option>
+                      <option value="option-skills">COMPETENCES</option>
+                      <option value="option-projects">MES PROJETS</option>
+                      <option value="option-contact">CONTACTS</option>
+                    </select>
+                  </div>                  
+                <hr style="margin-top: 1px;height: 50px;">
+                <input type="search" id="query" name="q" placeholder="Search..." autocomplete="off">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="content">
+        <div class="card-grid" id="search-results"></div>
+    </div>
+
+
+
+    <script src='script.js'></script>
+</body>
+
 </html>
