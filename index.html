@@ -2,42 +2,70 @@
 <html>
 
 <head>
-    <title>Exa Navigator</title>
-    <link rel='stylesheet' href='style.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="./Ressources/favicon.png">
+  <title>Romain Madery Portolio</title>
+  <link rel='stylesheet' href='style.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="./Ressources/favicon.png">
 </head>
 
 <body>
-    <div class="header">
-        <img id="exa-icon" src="./Ressources/NavigatorIcon.png" width="100px" height="200" />
-        <div class="search-section">
-            <div class="search-container">
-                <div class="combobox">
-                    <select id="search-select" onchange="adjustComboBoxSize()">
-                      <option value="option-all">TOUT</option>
-                      <option value="option-presentation">PRESENTATION</option>
-                      <option value="option-school">SCOLAIRE</option>
-                      <option value="option-internship">ALTERNANCE</option>
-                      <option value="option-skills">COMPETENCES</option>
-                      <option value="option-projects">MES PROJETS</option>
-                      <option value="option-contact">CONTACTS</option>
-                    </select>
-                  </div>                  
-                <hr style="margin-top: 1px;height: 50px;">
-                <input type="search" id="query" name="q" placeholder="Search..." autocomplete="off">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
+  <div class="header">
+    <img id="exa-icon" src="./Ressources/NavigatorIcon.png" width="100px" height="200" />
+    <div class="search-section">
+      <div class="search-container">
+        <div class="combobox">
+          <select id="search-select" onchange="adjustComboBoxSize()">
+            <option value="option-all">TOUT</option>
+            <option value="option-presentation">PRESENTATION</option>
+            <option value="option-school">SCOLAIRE</option>
+            <option value="option-internship">ALTERNANCE</option>
+            <option value="option-skills">COMPETENCES</option>
+            <option value="option-projects">MES PROJETS</option>
+            <option value="option-contact">CONTACTS</option>
+          </select>
         </div>
+        <hr style="margin-top: 1px;height: 50px;">
+        <input type="search" id="query" name="q" placeholder="Search..." autocomplete="off">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
     </div>
-    <br>
-    <div class="content">
-        <div class="card-grid" id="search-results"></div>
+  </div>
+  <br>
+  <div class="content">
+    <div class="card-grid">
+      <div class="search-card">
+        <h2>CV</h2>
+        <p>type : Présentation</p>
+      </div>
+      <div class="search-card">
+        <h2>STID - Paris Descartes</h2>
+        <p>type : scolaire</p>
+      </div>
+      <div class="search-card">
+        <h2>ESIEE IT</h2>
+        <p>type : scolaire</p>
+      </div>
+      <div class="search-card">
+        <h2>Arc Infomatique</h2>
+        <p>type : alternance</p>
+      </div>
+      <div class="search-card">
+        <h2>Mes musiques</h2>
+        <p>type : loisir</p>
+      </div>
+      <div class="search-card">
+        <h2>Mes jeux</h2>
+        <p>type : loisir</p>
+      </div>
     </div>
+  </div>
+  </div>
+  </div>
 
 
 
-    <script src='script.js'></script>
+  <script src='script.js'></script>
 </body>
 
 </html>
