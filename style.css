@@ -1,14 +1,16 @@
-html{
+html {
   background-color: aliceblue;
 }
+
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-.content{
-    height: 100vh;
-     background-color: #efefef;
-     padding: 5%;
+
+.content {
+  height: 100vh;
+  background-color: #efefef;
+  padding: 5%;
 }
 
 .card-grid {
@@ -22,7 +24,7 @@ body {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px; 
+  padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
 }
@@ -32,82 +34,85 @@ body {
 }
 
 .search-section {
-    border: 2px solid #878383;
-    width: 35%;
-    background-color: #3330;
-    padding: 5px 0px;
-    border-radius: 50px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column; 
-    max-height: 25px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 0 0 1px #333
+  border: 2px solid #878383;
+  width: 60%;
+  background-color: #3330;
+  padding: 5px 0px;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 25px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 0 0 1px #333
 }
+
 .search-container {
-    flex: 1; 
-    overflow: hidden; 
+  flex: 1;
+  overflow: hidden;
 }
 
 #query {
-    flex: 1;
-    border: none; 
-    outline: none; 
+  background-color: transparent;
+  flex: 1;
+  border: none;
+  outline: none;
 }
 
-  .combobox select:focus {
-    outline: none;
-  }
-  
+.combobox select:focus {
+  outline: none;
+}
+
 
 .search-container {
-    display: flex;
-    margin-left: 10px;  
-    margin-right: 10px;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #exa-icon {
-    border-radius: 200px;
-    width: 200px;
-    height: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 0 2px #d3cccc;
-    display: block; 
-    margin: 0 auto; 
-    transition: opacity 2.0s ease-in-out; 
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 0 2px #d3cccc;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 2.0s ease-in-out;
 }
 
 
-.header{
-    margin-top: 8%;
+.header {
+  margin-top: 8%;
 }
+
 #search-select {
-    background-color: white;
-    color: #366fa1;
-    font-weight: bold;
-    padding: 4px;
-    border: none;
+  background-color: transparent;
+  color: #366fa1;
+  font-weight: bold;
+  padding: 4px;
+  border: none;
 }
 
 button[type="submit"] {
-    margin-left: 5px;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  margin-left: 5px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: grey;
+  background-color: grey;
 }
 
 
-  
+
 .floatting {
   animation: float 3s ease-out infinite;
 }
 
 @keyframes float {
   50% {
-     transform: translate(45, 0px);
+    transform: translate(45, 0px);
   }
 }
 
@@ -157,13 +162,13 @@ button[type="submit"]:hover {
 }
 
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0,0,0,.8);
+  background: rgba(0, 0, 0, .8);
   overflow: auto;
 }
 
@@ -174,7 +179,7 @@ button[type="submit"]:hover {
   margin: 100px auto;
   animation-name: modalbox;
   animation-duration: .4s;
-  animation-timing-function: cubic-bezier(0,0,.3,1.6);
+  animation-timing-function: cubic-bezier(0, 0, .3, 1.6);
 }
 
 .modal-header {
@@ -195,22 +200,24 @@ button[type="submit"]:hover {
 
 @-webkit-keyframes modalbox {
   0% {
-    top: -250px; 
+    top: -250px;
     opacity: 0;
   }
+
   100% {
-    top: 0; 
+    top: 0;
     opacity: 1;
   }
 }
 
 @keyframes modalbox {
   0% {
-    top: -250px; 
+    top: -250px;
     opacity: 0;
   }
+
   100% {
-    top: 0; 
+    top: 0;
     opacity: 1;
   }
 }
