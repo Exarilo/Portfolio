@@ -1,17 +1,20 @@
+html{
+  background-color: aliceblue;
+}
 body {
     margin: 0;
     padding: 0;
 }
 .content{
     height: 100vh;
-     background-color: aliceblue;
+     background-color: #efefef;
      padding: 5%;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 5%;
   justify-content: space-between;
 }
 
@@ -50,13 +53,7 @@ body {
     border: none; 
     outline: none; 
 }
-.combobox select {
-    padding: 1px;
-    outline: none;
-    border: none;
-    transition: width 0.3s; 
-  }
-  
+
   .combobox select:focus {
     outline: none;
   }
@@ -88,7 +85,6 @@ body {
     font-weight: bold;
     padding: 4px;
     border: none;
-    width: 100%;
 }
 
 button[type="submit"] {
@@ -114,3 +110,52 @@ button[type="submit"]:hover {
      transform: translate(45, 0px);
   }
 }
+
+
+
+.card {
+  width: 350px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.card .title {
+  margin: 0;
+  font-style: italic;
+  text-align: center;
+  padding: 8px 20px;
+  background-color: black;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: -10px;
+  font-size: 15px;
+  color: #fff;
+
+}
+
+
