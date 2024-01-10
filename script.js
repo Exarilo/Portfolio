@@ -9,6 +9,7 @@ var isInitialLoad = true;
 window.onload = function() {
   adjustComboBoxSize();
   isInitialLoad = false;
+  initializeModal();
 };
 
 function adjustComboBoxSize() {
@@ -34,7 +35,6 @@ function getTextWidth(text, font) {
   var metrics = context.measureText(text);
   return metrics.width;
 }
-  
 
 image.addEventListener('click', () => {
     clickCount++; 
@@ -66,3 +66,44 @@ searchInput.addEventListener('keyup', event => {
 });
 
 
+
+function initializeModal(text, font) {
+  var cards = document.querySelectorAll(".card");
+
+  cards.forEach(function(card) {
+    card.addEventListener("click", function() {
+      var dataModal = this.querySelector(".title").textContent; 
+
+      var modal = document.getElementById("modal-name"); 
+      var modalHeader = modal.querySelector(".modal-header h1"); 
+
+      if (modal && modalHeader) {
+        modalHeader.textContent = dataModal; 
+
+        modal.style.display = "block"; 
+      }
+    });
+  });
+
+  var modalSandbox = document.querySelector(".modal-area");
+  if (modalSandbox) {
+    modalSandbox.addEventListener("click", function(e) {
+      if (e.target === this) {
+        var modal = document.getElementById("modal-name");
+        if (modal) {
+          modal.style.display = "none"; 
+        }
+      }
+    });
+  }
+
+  var closeButtons = document.querySelectorAll(".close-modal");
+  closeButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var modal = document.getElementById("modal-name");
+      if (modal) {
+        modal.style.display = "none"; 
+      }
+    });
+  });
+}
