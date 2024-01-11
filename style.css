@@ -244,3 +244,41 @@ button[type="submit"]:hover {
   left: 0;
   background: transparent;
 }
+
+
+.card[data-label="presentation"]::after {
+  background: #3949ab; 
+  width: 4rem;
+}
+
+.card[data-label="loisir"]::after {
+  background: #4caf50; 
+  width: 2rem;
+}
+.card[data-label="comptences"]::after {
+  background: #af8c4c; 
+  width: 4.2rem;
+}
+
+.card[data-label="scolaire"]::after {
+  background: #fd6060; 
+  width: 2.5rem;
+}
+
+.card[data-label="activité pro"]::after {
+  background: #c32cff; 
+  width: 3.6rem;
+}
+
+.card::after{
+  left: 2%;
+  font-size: 0.7rem;
+  position: absolute;
+  content: attr(data-label);
+  top: 11px;
+  padding: 0.5rem;
+  color: white;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+}
