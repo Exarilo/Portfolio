@@ -67,43 +67,26 @@ searchInput.addEventListener('keyup', event => {
 
 
 
-function initializeModal(text, font) {
-  var cards = document.querySelectorAll(".card");
+function initializeModal(modalId) {
+  var modal = document.getElementById('modal-' + modalId); 
 
-  cards.forEach(function(card) {
-    card.addEventListener("click", function() {
-      var dataModal = this.querySelector(".title").textContent; 
+  if (modal) {
+    modal.style.display = "block"; 
 
-      var modal = document.getElementById("modal-name"); 
-      var modalHeader = modal.querySelector(".modal-header h1"); 
-
-      if (modal && modalHeader) {
-        modalHeader.textContent = dataModal; 
-
-        modal.style.display = "block"; 
-      }
-    });
-  });
-
-  var modalSandbox = document.querySelector(".modal-area");
-  if (modalSandbox) {
-    modalSandbox.addEventListener("click", function(e) {
-      if (e.target === this) {
-        var modal = document.getElementById("modal-name");
-        if (modal) {
+    var modalSandboxes = modal.querySelectorAll(".modal-area");
+    modalSandboxes.forEach(function(sandbox) {
+      sandbox.addEventListener("click", function(e) {
+        if (e.target === this) {
           modal.style.display = "none"; 
         }
-      }
+      });
+    });
+
+    var closeButtons = modal.querySelectorAll(".bt-close-modal, .close-modal");
+    closeButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        modal.style.display = 'none';
+      });
     });
   }
-
-  var closeButtons = document.querySelectorAll(".close-modal");
-  closeButtons.forEach(function(button) {
-    button.addEventListener("click", function() {
-      var modal = document.getElementById("modal-name");
-      if (modal) {
-        modal.style.display = "none"; 
-      }
-    });
-  });
 }

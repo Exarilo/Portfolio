@@ -181,7 +181,11 @@ button[type="submit"]:hover {
   animation-duration: .4s;
   animation-timing-function: cubic-bezier(0, 0, .3, 1.6);
 }
-
+.modal-body iframe {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  overflow: auto;
+}
 .modal-header {
   padding: 20px 40px;
   background: #546E7A;
@@ -282,3 +286,24 @@ button[type="submit"]:hover {
   font-family: 'Roboto', sans-serif;
   box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
 }
+
+.bt-close-modal {
+  margin-top: 20px;
+  background-color: #000000;
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+  transition-duration: 0.8s;
+  color: white;
+}
+.bt-close-modal:hover {
+  background-color: #b63535; 
+}
+
+
+
+
+
+
+
+
