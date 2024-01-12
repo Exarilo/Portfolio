@@ -158,7 +158,6 @@ button[type="submit"]:hover {
   margin-bottom: -10px;
   font-size: 15px;
   color: #fff;
-
 }
 
 .modal {
@@ -172,15 +171,7 @@ button[type="submit"]:hover {
   overflow: auto;
 }
 
-.modal-box {
-  position: relative;
-  width: 80%;
-  max-width: 920px;
-  margin: 100px auto;
-  animation-name: modalbox;
-  animation-duration: .4s;
-  animation-timing-function: cubic-bezier(0, 0, .3, 1.6);
-}
+
 .modal-body iframe {
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -288,7 +279,7 @@ button[type="submit"]:hover {
 }
 
 .bt-close-modal {
-  margin-top: 20px;
+  margin-top: 50px;
   background-color: #000000;
   border: none;
   padding: 15px 32px;
@@ -302,8 +293,38 @@ button[type="submit"]:hover {
 
 
 
+.modal-box {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  max-width: 920px;
+  margin: 100px auto;
+  animation-name: modalbox;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0, 0, .3, 1.6);
+}
 
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
 
-
-
-
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+}
+.modal-body h3 {
+  color: #007BFF; /* Change to the color you want */
+  font-size: 1.2em; /* Change to the size you want */
+  font-weight: bold; /* Makes the text bold */
+}
+.skills-list {
+  max-height: 400px; /* Adjust this value to fit your design */
+  overflow-y: auto; /* This will add a scrollbar if the content is taller than the max-height */
+  margin: -20px;
+}
