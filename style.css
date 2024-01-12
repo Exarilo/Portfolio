@@ -7,19 +7,17 @@ body {
   padding: 0;
 }
 
-object {
-  border: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-}
-
 .content {
   height: 100%;
   background-color: #efefef;
   padding: 5%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5%;
+  justify-content: space-between;
 }
 
 .search-card {
@@ -118,8 +116,50 @@ button[type="submit"]:hover {
   }
 }
 
+.card {
+  width: 350px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
 
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
 
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.card .title {
+  margin: 0;
+  font-style: italic;
+  text-align: center;
+  padding: 8px 20px;
+  background-color: black;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: -10px;
+  font-size: 15px;
+  color: #fff;
+
+}
 
 .modal {
   display: none;
@@ -205,3 +245,40 @@ button[type="submit"]:hover {
   background: transparent;
 }
 
+
+.card[data-label="presentation"]::after {
+  background: #3949ab; 
+  width: 4rem;
+}
+
+.card[data-label="loisir"]::after {
+  background: #4caf50; 
+  width: 2rem;
+}
+.card[data-label="comptences"]::after {
+  background: #af8c4c; 
+  width: 4.2rem;
+}
+
+.card[data-label="scolaire"]::after {
+  background: #fd6060; 
+  width: 2.5rem;
+}
+
+.card[data-label="activité pro"]::after {
+  background: #c32cff; 
+  width: 3.6rem;
+}
+
+.card::after{
+  left: 2%;
+  font-size: 0.7rem;
+  position: absolute;
+  content: attr(data-label);
+  top: 11px;
+  padding: 0.5rem;
+  color: white;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+}
