@@ -65,19 +65,19 @@ searchInput.addEventListener('keyup', event => {
     if (event.key === 'Enter') performSearch();
 });
 
-
-
 function initializeModal(modalId) {
   var modal = document.getElementById('modal-' + modalId); 
 
   if (modal) {
     modal.style.display = "block"; 
+    document.body.style.overflow = "hidden";
 
     var modalSandboxes = modal.querySelectorAll(".modal-area");
     modalSandboxes.forEach(function(sandbox) {
       sandbox.addEventListener("click", function(e) {
         if (e.target === this) {
           modal.style.display = "none"; 
+          document.body.style.overflow = "auto"; 
         }
       });
     });
@@ -86,6 +86,7 @@ function initializeModal(modalId) {
     closeButtons.forEach(function(button) {
       button.addEventListener("click", function() {
         modal.style.display = 'none';
+        document.body.style.overflow = "auto"; 
       });
     });
   }
