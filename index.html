@@ -23,7 +23,7 @@
             <option value="option-internship">ALTERNANCE</option>
             <option value="option-skills">COMPETENCES</option>
             <option value="option-projects">MES PROJETS</option>
-            <option value="option-contact">CONTACTS</option>
+            <option value="option-contact">ME CONTACTER</option>
           </select>
         </div>
         <hr style="margin-top: 1px;height: 50px;">
@@ -341,17 +341,30 @@
       <div class="modal-area"></div>
       <div class="modal-box">
         <div class="modal-header">
-          <div class="close-modal">&#10006;</div>
+          <div class="close-modal" onclick="closeModal('modal-contacts')">&#10006;</div>
           <h1>Me Contacter</h1>
         </div>
         <div class="modal-body">
-          <p>Pas encore implementé</p>
-          <button class="bt-close-modal">Fermer</button>
+          <p>N'hésitez pas à me contacter :</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/madery-romain-5a001414b/" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:romain.madery92@gmail.com">
+              <i class="far fa-envelope"></i> Envoyer un e-mail
+            </a>
+            <a href="tel:+33633186258">
+              <i class="fas fa-phone"></i> 06 33 18 62 58
+            </a>
+          </div>
+          <button class="bt-close-modal" onclick="closeModal('modal-contacts')">Fermer</button>
         </div>
       </div>
     </div>
+    
+    
+    
 
     <script src='script.js'></script>
 </body>
-
 </html>

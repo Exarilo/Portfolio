@@ -319,12 +319,30 @@ button[type="submit"]:hover {
   margin-right: 1em;
 }
 .modal-body h3 {
-  color: #007BFF; /* Change to the color you want */
-  font-size: 1.2em; /* Change to the size you want */
-  font-weight: bold; /* Makes the text bold */
+  color: #007BFF; 
+  font-size: 1.2em; 
+  font-weight: bold; 
 }
 .skills-list {
-  max-height: 400px; /* Adjust this value to fit your design */
-  overflow-y: auto; /* This will add a scrollbar if the content is taller than the max-height */
+  max-height: 400px; 
+  overflow-y: auto; 
   margin: -20px;
 }
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  color: #3498db;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.contact-links i {
+  margin-right: 10px;
+}
+
