@@ -49,18 +49,27 @@ image.addEventListener('click', () => {
 });
 
 const performSearch = async () => {
-    const selectedOption = document.getElementById('search-select').value;
-    const searchTerm = searchInput.value;
+  //const selectedOption = document.getElementById('search-select').value;
+  const searchTerm = searchInput.value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
 
-    switch (selectedOption) {
-        case 'option-all':
-            break;
-        default:
-            console.log(`error.`);
+  cards.forEach(card => {
+    const title = card.querySelector('.title').innerText.toLowerCase();
+    const dataLabel = card.getAttribute('data-label').toLowerCase();
+    const titleMatch = title.includes(searchTerm);
+    const dataLabelMatch = dataLabel.includes(searchTerm);
+
+    if (titleMatch || dataLabelMatch) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
     }
+  });
 };
 
+
 searchButton.addEventListener('click', performSearch);
+searchInput.addEventListener('input', performSearch);
 searchInput.addEventListener('keyup', event => {
     if (event.key === 'Enter') performSearch();
 });
@@ -91,3 +100,4 @@ function initializeModal(modalId) {
     });
   }
 }
+
