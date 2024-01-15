@@ -12,7 +12,7 @@
 
 <body>
   <div class="header">
-    <img id="exa-icon" src="./Ressources/NavigatorIcon.png" width="100px" height="200" />
+    <img id="exa-icon" src="./Ressources/moi.jpg" width="100px" height="200" />
     <div class="search-section">
       <div class="search-container">
         <div class="combobox">
@@ -126,6 +126,13 @@
           <p class="title">Contacts</p>
         </div>
         <img src="https://cdn-icons-png.flaticon.com/512/5075/5075578.png" alt="Contacts" />
+      </div>
+
+      <div class="card" data-label="presentation" onclick="initializeModal('projects')">
+        <div class="content">
+          <p class="title">Mes Projets</p>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/2833/2833587.png" alt="Projects" />
       </div>
 
     </div>
@@ -331,17 +338,31 @@
           <h1>Langues</h1>
         </div>
         <div class="modal-body">
-          <p>Pas encore implementé</p>
+          <div class="language-info">
+            <h2>Niveau de Langues :</h2>
+            <p>Français : Langue maternelle</p>
+            <p>Anglais : Avancé</p>
+          </div>
+          <div class="toeic-results">
+            <h2>Résultats au TOEIC :</h2>
+            <p>Score total : 780</p>
+            <p>Listening : 425</p>
+            <p>Reading : 355</p>
+            <a href="./Ressources/TOEIC_Resultats.pdf" target="_blank">Voir les résultats au TOEIC (PDF)</a>
+          </div>
           <button class="bt-close-modal">Fermer</button>
         </div>
       </div>
     </div>
 
+
+
+
     <div class="modal" id="modal-contacts">
       <div class="modal-area"></div>
       <div class="modal-box">
         <div class="modal-header">
-          <div class="close-modal" onclick="closeModal('modal-contacts')">&#10006;</div>
+          <div class="close-modal">&#10006;</div>
           <h1>Me Contacter</h1>
         </div>
         <div class="modal-body">
@@ -357,7 +378,34 @@
               <i class="fas fa-phone"></i> 06 33 18 62 58
             </a>
           </div>
-          <button class="bt-close-modal" onclick="closeModal('modal-contacts')">Fermer</button>
+          <button class="bt-close-modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="modal" id="modal-projects">
+      <div class="modal-area"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="close-modal">&#10006;</div>
+          <h1 class="modal-title">Mes Projets</h1>
+        </div>
+        <div class="modal-body">
+          <div class="project-info">
+            <p class="info-text">Découvrez les differents types de projets que j'ai réalisés au fil du temps :</p>
+            <ul class="project-list">
+              <li>Outils de dev</li>
+              <li>Projets scolaires</li>
+              <li>Projets Arduino</li>
+              <li>Jeux divers</li>
+              <li>Projet axé sur les médias sociaux</li>
+            </ul>
+            <p class="info-text">Pour une liste complète de tous mes projets, visitez la page dédiée (les projets marqués en privé ne peuvent pas être visualisés):</p>
+            <p><a href="https://exarilo.github.io/" target="_blank" class="view-link">Voir mes projets</a></p>
+            <p><a href="https://github.com/Exarilo" target="_blank" class="view-link">Voir mon Github</a></p>
+          </div>
+          <button class="bt-close-modal">Fermer</button>
         </div>
       </div>
     </div>
