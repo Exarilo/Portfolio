@@ -240,7 +240,7 @@ button[type="submit"]:hover {
   background: transparent;
 }
 
-
+/*
 .card[data-label="presentation"]::after {
   background: #3949ab; 
   width: 4rem;
@@ -277,7 +277,7 @@ button[type="submit"]:hover {
   font-family: 'Roboto', sans-serif;
   box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
 }
-
+*/
 .bt-close-modal {
   margin-top: 50px;
   background-color: #000000;
