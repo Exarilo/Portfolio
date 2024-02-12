@@ -62,18 +62,14 @@
         <div class="content">
           <p class="title">Formation</p>
         </div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/3482/3482505.png"
-          alt="Formation" />
+        <img src="https://cdn-icons-png.flaticon.com/512/3482/3482505.png" alt="Formation" />
       </div>
 
       <div class="card" onclick="initializeModal('experience')">
         <div class="content">
           <p class="title">Expérience</p>
         </div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/6214/6214253.png"
-          alt="Expérience" />
+        <img src="https://cdn-icons-png.flaticon.com/512/6214/6214253.png" alt="Expérience" />
       </div>
 
       <div class="card" onclick="initializeModal('language')">
@@ -123,15 +119,17 @@
             <h1>Présentation</h1>
           </div>
           <div class="modal-body">
-            <p>Ingénieur apprenti et développeur logiciel passionné, je recherche des opportunités dans le domaine du développement logiciel avec des technologies variées. J’ai plus de 2 ans d’expérience chez PcVue Solutions, une entreprise basée à Sèvres, Île-de-France, spécialisée dans les solutions de supervision industrielle.</p>
-            
-            <p>Actuellement, je poursuis en alternance un Master 2 en Informatique à l’ESIEE-IT, après avoir obtenu une Licence générale en Informatique du CNAM. Je maîtrise plusieurs langages et outils de programmation, tels que C#, Java, Python, Git, SQL, Windows Forms, etc.</p>
-            
-            <p>Explorez mes projets sur GitHub : <a href="https://github.com/Exarilo">https://github.com/Exarilo</a></p>
-            
+            <p>Ingénieur apprenti et développeur logiciel passionné, je recherche des opportunités dans le domaine du
+              développement logiciel avec des technologies variées. J’ai plus de 2 ans d’expérience chez PcVue
+              Solutions, une entreprise basée à Sèvres, Île-de-France, spécialisée dans les solutions de supervision
+              industrielle.</p>
+
+            <p>Actuellement, je poursuis en alternance un Master 2 en Informatique à l’ESIEE-IT, après avoir obtenu une
+              Licence générale en Informatique du CNAM. Je maîtrise plusieurs langages et outils de programmation, tels
+              que C#, Java, Python, Git, SQL, Windows Forms, etc.</p>
             <button class="bt-close-modal">Fermer</button>
-        </div>
-        
+          </div>
+
         </div>
       </div>
 
@@ -143,7 +141,7 @@
             <h1>Compétences</h1>
           </div>
           <div class="modal-body">
-            <div class="skills-list">
+            <div class="scrollable-modal-body">
               <h2>Expérimenté</h2>
               <div class="skill">
                 <img
@@ -206,9 +204,10 @@
             <h1>Formation</h1>
           </div>
           <div class="modal-body">
-            <p>IUT Paris Descartes</p>
-            <p>Esiee IT</p>
-            <p>CNAM - Charles de Foucauld</p>
+
+            <p><b>Master</b> - Esiee IT</p>
+            <p><b>License Générale</b> - CNAM</p>
+            <p><b>DUT</b> - IUT Paris Descartes</p>
             <button class="bt-close-modal">Fermer</button>
           </div>
         </div>
@@ -217,100 +216,164 @@
       <div class="modal" id="modal-experience">
         <div class="modal-area"></div>
         <div class="modal-box">
-          <div class="modal-header">
-            <div class="close-modal">&#10006;</div>
-            <h1>Experience professionnelle</h1>
-          </div>
-          <div class="modal-body">
-            <p>Arc Informatique - PcVue Solution</p>
-            <p>Société Générale IT</p>
-            <p>CNAM - Charles de Foucauld</p>
-            <button class="bt-close-modal">Fermer</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="modal" id="modal-language">
-        <div class="modal-area"></div>
-        <div class="modal-box">
-          <div class="modal-header">
-            <div class="close-modal">&#10006;</div>
-            <h1>Langues</h1>
-          </div>
-          <div class="modal-body">
-            <div class="language-info">
-              <h2>Niveau de Langues :</h2>
-              <p>Français : Langue maternelle</p>
-              <p>Anglais : Avancé</p>
+            <div class="modal-header">
+                <div class="close-modal">&#10006;</div>
+                <h1>Experience professionnelle</h1>
             </div>
-            <div class="toeic-results">
-              <h2>Résultats au TOEIC :</h2>
-              <p>Score total : 780</p>
-              <p>Listening : 425</p>
-              <p>Reading : 355</p>
-              <a href="./Ressources/TOEIC_Resultats.pdf" target="_blank">Voir les résultats au TOEIC (PDF)</a>
+            <div class="modal-body scrollable-modal-body"> <!-- Correction ici -->
+                <div class="experience-card">
+                    <h2>Apprenti ingénieur - PcVue Solution (2021 -2024)</h2>
+                    <p>
+                        - Développement en C# d’API REST dans le logiciel PcVue (Microsoft Graph, Sigfox, Orange Live
+                        Objects…)<br>
+                        - Gestion des authentifications (OAuth)<br>
+                        - Création et documentation d'un serveur Node.js simulant les requêtes d'API REST de provider.<br>
+                        - Création de l'UI du serveur Nodes.js et déploiement sur Docker.<br>
+                        - Programmation et utilisation d’objets connectés (Wago, Smilio, Adeunis)<br><br>
+    
+                        - Développement et intégration d'un Wizard dans le logiciel PcVue pour créer des requêtes SQL vers une
+                        base de données Oracle<br>
+                        - Création des tests unitaires pour le provider Salesforce.<br>
+                        - Création de projets de tests et de démonstration (PcVue)<br>
+                        - Outil de parsing XML vérifiant l'intégrité de d'autres fichiers xml de PcVue<br><br>
+    
+                        Formations Professionnelles :<br>
+                        - C# Avancé (IB Formation) : 5j<br>
+                        - C++ (IB Formation) : 5j<br>
+                        - Git (Delicious Insights) : 5j
+                    </p>
+                </div>
+
+                <div class="experience-card">
+                  <h2>Stage : Développement d'application - PcVue Solution (2021)</h2>
+                  <p>
+                    Développement d’un outil de génération de masse d’historiques en base de données (en C#).<br><br>
+                
+                    - Analyse des données du projet PcVue et stockage dans les objets en mémoire.<br>
+                    - Création de l’IHM et gestion des saisies utilisateur.<br>
+                    - Génération des données d’historique à partir des données projet et des choix utilisateur.<br>
+                    - Ecriture des données dans SQL Server via ADO.net.<br>
+                    - Formation des utilisateurs en français et en anglais. Documentation technique en anglais.
+                </p>
+              </div>
+              <div class="experience-card">
+                <h2>Stage : Développement d'application - PcVue Solution (2020)</h2>
+                <p>
+                  Traitement des résultats des tests de non-régression du logiciel PcVue (développement en C#).<br><br>
+              
+                  - Maquettage d'une interface graphique<br>
+                  - Lecture d'un fichier XML et création de classes propres à chaque objet<br>
+                  - Connexion et création de tables via ADO.NET pour une base de données SQL server<br>
+                  - Création d'un fichier de configuration XML via l'app.config<br>
+                  - Paramétrage d'un envoi de mail automatique sur l'IHM de l'application<br>
+                  - Création de tests unitaires
+              </p>
             </div>
-            <button class="bt-close-modal">Fermer</button>
+
+            <div class="experience-card">
+              <h2>Job d'été : Assistant qualification - PcVue Solution (2018)</h2>
+              <p>
+                - Test d’une fonctionnalité complète du logiciel PcVue (import XML de la configuration) d’après un plan de vérification.<br>
+                - Création des jeux de données en XML d’après la syntaxe spécifiée et validation du résultat obtenu après import.<br><br>
+                - Rédaction des fiches d’anomalie et remontée des informations auprès du responsable qualification et de l’ingénieur développement en charge de la fonctionnalité.
+            </p>         
           </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="modal" id="modal-contacts">
-        <div class="modal-area"></div>
-        <div class="modal-box">
-          <div class="modal-header">
-            <div class="close-modal">&#10006;</div>
-            <h1>Me Contacter</h1>
-          </div>
-          <div class="modal-body">
-            <p>N'hésitez pas à me contacter :</p>
-            <div class="contact-links">
-              <a href="https://www.linkedin.com/in/madery-romain-5a001414b/" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
-              <a href="mailto:romain.madery92@gmail.com">
-                <i class="far fa-envelope"></i> Envoyer un e-mail
-              </a>
-              <a href="tel:+33633186258">
-                <i class="fas fa-phone"></i> 06 33 18 62 58
-              </a>
+          <div class="experience-card">
+            <h2>Job d'été : Phonning - Société Générale(2016)</h2>
+            <p>
+              - Phoning et relance des clients<br>
+              - Prise de rendez-vous pour les conseillers clientèle
+          </p>
+          
             </div>
-            <button class="bt-close-modal">Fermer</button>
-          </div>
+            <button class="bt-close-modal" style="margin: 20px;">Fermer</button>
         </div>
-      </div>
+    </div>
+    
 
 
-      <div class="modal" id="modal-projects">
-        <div class="modal-area"></div>
-        <div class="modal-box">
-          <div class="modal-header">
-            <div class="close-modal">&#10006;</div>
-            <h1 class="modal-title">Mes Projets</h1>
-          </div>
-          <div class="modal-body">
-            <div class="project-info">
-              <p class="info-text">Découvrez les differents types de projets que j'ai réalisés au fil du temps :</p>
-              <ul class="project-list">
-                <li>Outils de dev</li>
-                <li>Projets scolaires</li>
-                <li>Projets Arduino</li>
-                <li>Jeux divers</li>
-                <li>Projet axé sur les médias sociaux</li>
-              </ul>
-              <p class="info-text">Pour une liste complète de tous mes projets, visitez les liens suivants (les projets
-                marqués en privé ne peuvent pas être visualisés):</p>
-              <p><a href="https://exarilo.github.io/" target="_blank" class="view-link">Voir mes projets</a></p>
-              <p><a href="https://github.com/Exarilo" target="_blank" class="view-link">Voir mon Github</a></p>
-            </div>
-            <button class="bt-close-modal">Fermer</button>
-          </div>
-        </div>
+
+  <div class="modal" id="modal-language">
+    <div class="modal-area"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="close-modal">&#10006;</div>
+        <h1>Langues</h1>
       </div>
-      <script src='script.js'></script>
+      <div class="modal-body">
+        <div class="language-info">
+          <h2>Niveau de Langues :</h2>
+          <p>Français : Langue maternelle</p>
+          <p>Anglais : Avancé</p>
+        </div>
+        <div class="toeic-results">
+          <h2>Résultats au TOEIC :</h2>
+          <p>Score total : 780</p>
+          <p>Listening : 425</p>
+          <p>Reading : 355</p>
+          <a href="./Ressources/TOEIC_Resultats.pdf" target="_blank">Voir les résultats au TOEIC (PDF)</a>
+        </div>
+        <button class="bt-close-modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal" id="modal-contacts">
+    <div class="modal-area"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="close-modal">&#10006;</div>
+        <h1>Me Contacter</h1>
+      </div>
+      <div class="modal-body">
+        <p>N'hésitez pas à me contacter :</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/madery-romain-5a001414b/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:romain.madery92@gmail.com">
+            <i class="far fa-envelope"></i> Envoyer un e-mail
+          </a>
+          <a href="tel:+33633186258">
+            <i class="fas fa-phone"></i> 06 33 18 62 58
+          </a>
+        </div>
+        <button class="bt-close-modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="modal-projects">
+    <div class="modal-area"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="close-modal">&#10006;</div>
+        <h1 class="modal-title">Mes Projets</h1>
+      </div>
+      <div class="modal-body">
+        <div class="project-info">
+          <p class="info-text">Découvrez les differents types de projets que j'ai réalisés au fil du temps :</p>
+          <ul class="project-list">
+            <li>Outils de dev</li>
+            <li>Projets scolaires</li>
+            <li>Projets Arduino</li>
+            <li>Jeux divers</li>
+            <li>Projet axé sur les médias sociaux</li>
+          </ul>
+          <p class="info-text">Pour une liste complète de tous mes projets, visitez les liens suivants (les projets
+            marqués en privé ne peuvent pas être visualisés):</p>
+          <p><a href="https://exarilo.github.io/" target="_blank" class="view-link">Voir mes projets</a></p>
+          <p><a href="https://github.com/Exarilo" target="_blank" class="view-link">Voir mon Github</a></p>
+        </div>
+        <button class="bt-close-modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+  <script src='script.js'></script>
 </body>
+
 </html>
