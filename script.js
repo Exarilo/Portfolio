@@ -1,21 +1,18 @@
 const searchButton = document.querySelector('button[type="submit"]');
 const searchInput = document.getElementById('query');
-
+const select = document.getElementById("search-select");
 const image = document.getElementById('exa-icon');
 let clickCount = 0; 
-
-
 var isInitialLoad = true; 
-window.onload = function() {
+
+document.addEventListener('DOMContentLoaded', function() {
   adjustComboBoxSize();
   isInitialLoad = false;
   initializeModal();
-};
+});
 
 function adjustComboBoxSize() {
-  var select = document.getElementById("search-select");
   var selectedOption = select.options[select.selectedIndex];
-
   var textWidth = getTextWidth(selectedOption.text, window.getComputedStyle(select).font) + 35;
 
   if (!isInitialLoad) {
@@ -26,7 +23,6 @@ function adjustComboBoxSize() {
 
   select.style.width = textWidth + "px";
 }
-
 
 function getTextWidth(text, font) {
   var canvas = document.createElement("canvas");
@@ -42,20 +38,21 @@ image.addEventListener('click', () => {
     if (clickCount >= 10) {
         image.style.opacity = 0; 
         image.style.pointerEvents = 'none'; 
-        setTimeout(() => {
+        image.style.transition = 'opacity 0.3s, visibility 0.3s';
+        image.addEventListener('transitionend', () => {
             image.style.display = 'none';
-        }, 2000);
+            image.removeEventListener('click', () => {}); 
+        }, { once: true });
     }
 });
 
 const performSearch = async () => {
-  //const selectedOption = document.getElementById('search-select').value;
   const searchTerm = searchInput.value.toLowerCase();
   const cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
-    const title = card.querySelector('.title').innerText.toLowerCase();
-    const dataLabel = card.getAttribute('data-label').toLowerCase();
+    const title = card.querySelector('.title').textContent.toLowerCase();
+    const dataLabel = card.getAttribute('data-label').textContent.toLowerCase();
     const titleMatch = title.includes(searchTerm);
     const dataLabelMatch = dataLabel.includes(searchTerm);
 
@@ -66,7 +63,6 @@ const performSearch = async () => {
     }
   });
 };
-
 
 searchButton.addEventListener('click', performSearch);
 searchInput.addEventListener('input', performSearch);
@@ -81,14 +77,11 @@ function initializeModal(modalId) {
     modal.style.display = "block"; 
     document.body.style.overflow = "hidden";
 
-    var modalSandboxes = modal.querySelectorAll(".modal-area");
-    modalSandboxes.forEach(function(sandbox) {
-      sandbox.addEventListener("click", function(e) {
-        if (e.target === this) {
-          modal.style.display = "none"; 
-          document.body.style.overflow = "auto"; 
-        }
-      });
+    modal.addEventListener("click", function(e) {
+      if (e.target.classList.contains("modal-area")) {
+        modal.style.display = "none"; 
+        document.body.style.overflow = "auto"; 
+      }
     });
 
     var closeButtons = modal.querySelectorAll(".bt-close-modal, .close-modal");
