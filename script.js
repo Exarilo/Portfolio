@@ -48,24 +48,19 @@ image.addEventListener('click', () => {
     }
 });
 
-const performSearch = async () => {
-  //const selectedOption = document.getElementById('search-select').value;
-  const searchTerm = searchInput.value.toLowerCase();
+const performSearch = () => {
+  const searchTerm = searchInput.value.trim().toLowerCase(); // Suppression des espaces inutiles
   const cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
-    const title = card.querySelector('.title').innerText.toLowerCase();
-    const dataLabel = card.getAttribute('data-label').toLowerCase();
-    const titleMatch = title.includes(searchTerm);
-    const dataLabelMatch = dataLabel.includes(searchTerm);
+    const title = card.querySelector('.title')?.innerText.toLowerCase() || ''; // Prévention si .title manque
+    const dataLabel = card.getAttribute('data-label')?.toLowerCase() || ''; // Vérifiez si data-label existe
+    const matches = title.includes(searchTerm) || dataLabel.includes(searchTerm);
 
-    if (titleMatch || dataLabelMatch) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display = matches ? 'block' : 'none';
   });
 };
+
 
 
 searchButton.addEventListener('click', performSearch);
