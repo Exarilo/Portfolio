@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <title>Romain Madery Portolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio professionnel de Romain Madery - Ingénieur et développeur logiciel">
+  <meta name="keywords" content="portfolio, développeur, C#, Java, Python, ingénieur, développement">
+  <title>Romain Madery - Portfolio</title>
   <link rel='stylesheet' href='style.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="./Ressources/favicon.png">
 </head>
 
 <body>
   <div class="header">
-    <img id="exa-icon" src="./Ressources/moi.jpg" width="100px" height="200" />
+    <img id="exa-icon" src="./Ressources/moi.jpg" alt="Photo de Romain Madery" width="200" height="200" />
     <div class="search-section">
       <div class="search-container">
         <div class="combobox">
@@ -27,29 +31,29 @@
           </select>
         </div>
         <hr style="margin-top: 1px;height: 50px;">
-        <input type="search" id="query" name="q" placeholder="Search..." autocomplete="off">
-        <button type="submit"><i class="fas fa-search"></i></button>
+        <input type="search" id="query" name="q" placeholder="Rechercher..." autocomplete="off">
+        <button type="submit" aria-label="Rechercher"><i class="fas fa-search"></i></button>
       </div>
     </div>
   </div>
-  <br>
-  <div class="content">
+  
+  <main class="content">
     <div class="card-grid">
-      <div class="card" onclick="initializeModal('cv')">
+      <div class="card" onclick="initializeModal('cv')" data-label="cv">
         <div class="content">
           <p class="title">CV</p>
         </div>
         <img src="https://cdn.iconscout.com/icon/free/png-256/free-resume-1956282-1650445.png" alt="CV" />
       </div>
 
-      <div class="card" onclick="initializeModal('presentation')">
+      <div class="card" onclick="initializeModal('presentation')" data-label="presentation">
         <div class="content">
           <p class="title">Présentation</p>
         </div>
         <img src="https://cdn-icons-png.flaticon.com/512/4086/4086652.png" alt="Présentation" />
       </div>
 
-      <div class="card" onclick="initializeModal('skills')">
+      <div class="card" onclick="initializeModal('skills')" data-label="competences">
         <div class="content">
           <p class="title">Compétences</p>
         </div>
@@ -58,21 +62,21 @@
           alt="Compétences" />
       </div>
 
-      <div class="card" onclick="initializeModal('formation')">
+      <div class="card" onclick="initializeModal('formation')" data-label="scolaire">
         <div class="content">
           <p class="title">Formation</p>
         </div>
         <img src="https://cdn-icons-png.flaticon.com/512/3482/3482505.png" alt="Formation" />
       </div>
 
-      <div class="card" onclick="initializeModal('experience')">
+      <div class="card" onclick="initializeModal('experience')" data-label="alternance">
         <div class="content">
           <p class="title">Expérience</p>
         </div>
         <img src="https://cdn-icons-png.flaticon.com/512/6214/6214253.png" alt="Expérience" />
       </div>
 
-      <div class="card" onclick="initializeModal('language')">
+      <div class="card" onclick="initializeModal('language')" data-label="langues">
         <div class="content">
           <p class="title">Langues</p>
         </div>
@@ -80,21 +84,21 @@
       </div>
 
 
-      <div class="card" onclick="initializeModal('projects')">
+      <div class="card" onclick="initializeModal('projects')" data-label="projets">
         <div class="content">
           <p class="title">Mes Projets</p>
         </div>
         <img src="https://cdn-icons-png.flaticon.com/512/2833/2833587.png" alt="Projects" />
       </div>
 
-      <div class="card" onclick="initializeModal('contacts')">
+      <div class="card" onclick="initializeModal('contacts')" data-label="contact">
         <div class="content">
           <p class="title">Contacts</p>
         </div>
         <img src="https://cdn-icons-png.flaticon.com/512/5075/5075578.png" alt="Contacts" />
       </div>
 
-
+      <!-- Modales -->
       <div class="modal" id="modal-cv">
         <div class="modal-area"></div>
         <div class="modal-box">
@@ -104,9 +108,8 @@
           </div>
           <div class="modal-body">
             <iframe src="./Ressources/CV.pdf" width="100%" height="500px" title="CV">
-              <p>It appears your web browser doesn't support iframes.</p>
+              <p>Votre navigateur ne supporte pas les iframes.</p>
             </iframe>
-            <button class="bt-close-modal">Fermer</button>
           </div>
         </div>
       </div>
@@ -123,14 +126,12 @@
               Ingénieur et développeur logiciel passionné, je recherche des opportunités dans le domaine du développement logiciel avec des technologies variées.
             </p>
             <p> 
-              J’ai plus de 3 ans d’expérience chez PcVue Solutions, une entreprise basée à Sèvres, Île-de-France, spécialisée dans les solutions de supervision industrielle.
+              J'ai plus de 3 ans d'expérience chez PcVue Solutions, une entreprise basée à Sèvres, Île-de-France, spécialisée dans les solutions de supervision industrielle.
             </p> 
             <p> 
               Je maîtrise plusieurs langages et outils de programmation, tels que C#, Java, Python, Git, SQL, Windows Forms, etc.
             </p> 
-            <button class="bt-close-modal">Fermer</button>
           </div>
-
         </div>
       </div>
 
@@ -192,7 +193,6 @@
                 <h3>Linux</h3>
               </div>
             </div>
-            <button class="bt-close-modal">Fermer</button>
           </div>
         </div>
       </div>
@@ -205,11 +205,9 @@
             <h1>Formation</h1>
           </div>
           <div class="modal-body">
-
             <p><b>Master</b> - Esiee IT</p>
             <p><b>License Générale</b> - CNAM</p>
             <p><b>DUT</b> - IUT Paris Descartes</p>
-            <button class="bt-close-modal">Fermer</button>
           </div>
         </div>
       </div>
@@ -221,16 +219,16 @@
                 <div class="close-modal">&#10006;</div>
                 <h1>Experience professionnelle</h1>
             </div>
-            <div class="modal-body scrollable-modal-body"> <!-- Correction ici -->
+            <div class="modal-body scrollable-modal-body">
                 <div class="experience-card">
                     <h2>Apprenti ingénieur - PcVue Solution (2021 -2024)</h2>
                     <p>
-                        - Développement en C# d’API REST dans le logiciel PcVue (Microsoft Graph, Sigfox, Orange Live
+                        - Développement en C# d'API REST dans le logiciel PcVue (Microsoft Graph, Sigfox, Orange Live
                         Objects…)<br>
                         - Gestion des authentifications (OAuth)<br>
                         - Création et documentation d'un serveur Node.js simulant les requêtes d'API REST de provider.<br>
                         - Création de l'UI du serveur Nodes.js et déploiement sur Docker.<br>
-                        - Programmation et utilisation d’objets connectés (Wago, Smilio, Adeunis)<br><br>
+                        - Programmation et utilisation d'objets connectés (Wago, Smilio, Adeunis)<br><br>
     
                         - Développement et intégration d'un Wizard dans le logiciel PcVue pour créer des requêtes SQL vers une
                         base de données Oracle<br>
@@ -248,11 +246,11 @@
                 <div class="experience-card">
                   <h2>Stage : Développement d'application - PcVue Solution (2021)</h2>
                   <p>
-                    Développement d’un outil de génération de masse d’historiques en base de données (en C#).<br><br>
+                    Développement d'un outil de génération de masse d'historiques en base de données (en C#).<br><br>
                 
                     - Analyse des données du projet PcVue et stockage dans les objets en mémoire.<br>
-                    - Création de l’IHM et gestion des saisies utilisateur.<br>
-                    - Génération des données d’historique à partir des données projet et des choix utilisateur.<br>
+                    - Création de l'IHM et gestion des saisies utilisateur.<br>
+                    - Génération des données d'historique à partir des données projet et des choix utilisateur.<br>
                     - Ecriture des données dans SQL Server via ADO.net.<br>
                     - Formation des utilisateurs en français et en anglais. Documentation technique en anglais.
                 </p>
@@ -274,9 +272,9 @@
             <div class="experience-card">
               <h2>Job d'été : Assistant qualification - PcVue Solution (2018)</h2>
               <p>
-                - Test d’une fonctionnalité complète du logiciel PcVue (import XML de la configuration) d’après un plan de vérification.<br>
-                - Création des jeux de données en XML d’après la syntaxe spécifiée et validation du résultat obtenu après import.<br><br>
-                - Rédaction des fiches d’anomalie et remontée des informations auprès du responsable qualification et de l’ingénieur développement en charge de la fonctionnalité.
+                - Test d'une fonctionnalité complète du logiciel PcVue (import XML de la configuration) d'après un plan de vérification.<br>
+                - Création des jeux de données en XML d'après la syntaxe spécifiée et validation du résultat obtenu après import.<br><br>
+                - Rédaction des fiches d'anomalie et remontée des informations auprès du responsable qualification et de l'ingénieur développement en charge de la fonctionnalité.
             </p>         
           </div>
           <div class="experience-card">
@@ -287,92 +285,94 @@
           </p>
           
             </div>
-            <button class="bt-close-modal" style="margin: 20px;">Fermer</button>
         </div>
       </div>
     </div>
     
-
-  <div class="modal" id="modal-language">
-    <div class="modal-area"></div>
-    <div class="modal-box">
-      <div class="modal-header">
-        <div class="close-modal">&#10006;</div>
-        <h1>Langues</h1>
-      </div>
-      <div class="modal-body">
-        <div class="language-info">
-          <h2>Niveau de Langues :</h2>
-          <p>Français : Langue maternelle</p>
-          <p>Anglais : Avancé</p>
+    <!-- Modale Langues -->
+    <div class="modal" id="modal-language">
+      <div class="modal-area"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="close-modal">&#10006;</div>
+          <h1>Langues</h1>
         </div>
-        <div class="toeic-results">
-          <h2>Résultats au TOEIC :</h2>
-          <p>Score total : 780</p>
-          <p>Listening : 425</p>
-          <p>Reading : 355</p>
-          <a href="./Ressources/TOEIC_Resultats.pdf" target="_blank">Voir les résultats au TOEIC (PDF)</a>
+        <div class="modal-body">
+          <div class="language-info">
+            <h2>Niveau de Langues :</h2>
+            <p>Français : Langue maternelle</p>
+            <p>Anglais : Avancé</p>
+          </div>
+          <div class="toeic-results">
+            <h2>Résultats au TOEIC :</h2>
+            <p>Score total : 780</p>
+            <p>Listening : 425</p>
+            <p>Reading : 355</p>
+            <a href="./Ressources/TOEIC_Resultats.pdf" target="_blank">Voir les résultats au TOEIC (PDF)</a>
+          </div>
         </div>
-        <button class="bt-close-modal">Fermer</button>
       </div>
     </div>
-  </div>
 
-
-
-
-  <div class="modal" id="modal-contacts">
-    <div class="modal-area"></div>
-    <div class="modal-box">
-      <div class="modal-header">
-        <div class="close-modal">&#10006;</div>
-        <h1>Me Contacter</h1>
-      </div>
-      <div class="modal-body">
-        <p>N'hésitez pas à me contacter :</p>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/romain-madery-5a001414b/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="mailto:romain.madery92@gmail.com">
-            <i class="far fa-envelope"></i> Envoyer un e-mail
-          </a>
-          <a href="tel:+33633186258">
-            <i class="fas fa-phone"></i> 06 33 18 62 58
-          </a>
+    <!-- Modale Contacts -->
+    <div class="modal" id="modal-contacts">
+      <div class="modal-area"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="close-modal">&#10006;</div>
+          <h1>Me Contacter</h1>
         </div>
-        <button class="bt-close-modal">Fermer</button>
+        <div class="modal-body">
+          <p>N'hésitez pas à me contacter :</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/romain-madery-5a001414b/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:romain.madery92@gmail.com">
+              <i class="far fa-envelope"></i> Envoyer un e-mail
+            </a>
+            <a href="tel:+33633186258">
+              <i class="fas fa-phone"></i> 06 33 18 62 58
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-
-  <div class="modal" id="modal-projects">
-    <div class="modal-area"></div>
-    <div class="modal-box">
-      <div class="modal-header">
-        <div class="close-modal">&#10006;</div>
-        <h1 class="modal-title">Mes Projets</h1>
-      </div>
-      <div class="modal-body">
-        <div class="project-info">
-          <p class="info-text">Découvrez les differents types de projets que j'ai réalisés au fil du temps :</p>
-          <ul class="project-list">
-            <li>Outils de dev</li>
-            <li>Projets scolaires</li>
-            <li>Projets Arduino</li>
-            <li>Jeux divers</li>
-            <li>Projet axé sur les médias sociaux</li>
-          </ul>
-          <p class="info-text">Pour une liste complète de tous mes projets, visitez les liens suivants (les projets
-            marqués en privé ne peuvent pas être visualisés):</p>
-          <p><a href="https://exarilo.github.io/" target="_blank" class="view-link">Voir mes projets</a></p>
-          <p><a href="https://github.com/Exarilo" target="_blank" class="view-link">Voir mon Github</a></p>
+    <!-- Modale Projets -->
+    <div class="modal" id="modal-projects">
+      <div class="modal-area"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="close-modal">&#10006;</div>
+          <h1 class="modal-title">Mes Projets</h1>
         </div>
-        <button class="bt-close-modal">Fermer</button>
+        <div class="modal-body">
+          <div class="project-info">
+            <p class="info-text">Découvrez les differents types de projets que j'ai réalisés au fil du temps :</p>
+            <ul class="project-list">
+              <li>Outils de dev</li>
+              <li>Projets scolaires</li>
+              <li>Projets Arduino</li>
+              <li>Jeux divers</li>
+              <li>Projet axé sur les médias sociaux</li>
+            </ul>
+            <p class="info-text">Pour une liste complète de tous mes projets, visitez les liens suivants (les projets
+              marqués en privé ne peuvent pas être visualisés):</p>
+            <div class="project-links">
+              <a href="https://exarilo.github.io/" target="_blank" rel="noopener" class="view-link">Voir mes projets</a>
+              <a href="https://github.com/Exarilo" target="_blank" rel="noopener" class="view-link">Voir mon Github</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Romain Madery. Tous droits réservés.</p>
+  </footer>
+
   <script src='script.js'></script>
 </body>
 
